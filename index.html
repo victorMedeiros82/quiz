@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show do Milhão</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container text-center vh-100">
+        <h1 class="">Show do Milhão</h1>
+        <div id="question-container"
+            class="d-flex flex-column shadow p-4 position-absolute top-50 start-50 translate-middle">
+            <span id="questionNumber" class="text-start">
+                PERGUNTA <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+            </span>
+            <div id="timeAndScore" class="d-flex flex-column align-items-end">
+                <div id="timer" class=""><span><i class="bi bi-clock-history"></i></span> <span id="time">30</span>
+                    segundos</div>
+                <div id="score" class="">Pontuação: 0</div>
+            </div>
+            <section id="questions" class="shadow p-3">
+                <h2 id="question">Pergunta aqui</h2>
+                <div id="options" class="mt-4">
+                    <!-- Opções serão inseridas dinamicamente -->
+                </div>
+            </section>
+            <section id="btns" class="d-flex justify-content-center gap-3 mt-3">
+                <button id="skip-btn" class="btn btn-danger w-100">NÃO SEI</button>
+                <button id="help-btn" class="btn btn-warning w-100">AJUDA</button>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal para confirmação -->
+    <div class="modal fade" id="skip-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja pular esta pergunta?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="confirm-skip" class="btn btn-warning">Sim</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para ajuda -->
+    <div class="modal fade" id="help-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ajuda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Você tera a sorte de eliminar entre 0 a 3 alternativas erradas para lhe ajudar. Boa sorte!</p>
+                    <div class="d-flex justify-content-around">
+                        <button class="btn btn-danger help-option" data-help="0"></button>
+                        <button class="btn btn-success help-option" data-help="1"></button>
+                        <button class="btn btn-primary help-option" data-help="2"></button>
+                        <button class="btn btn-warning help-option" data-help="3"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal tela final -->
+    <div class="modal fade" id="endGame-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">FIM DO JOGO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="header-modal">PREENCHA ATENTAMENTE AS INFORMAÇÕES NECESSÁRIAS</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sit error tempore non recusandae
+                        quisquam! Nobis porro voluptas voluptatum voluptate nisi neque ad. Beatae perspiciatis aliquam
+                        facilis accusantium ab voluptatum?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sit error tempore non recusandae
+                        quisquam! Nobis porro voluptas voluptatum voluptate nisi neque ad. Beatae perspiciatis aliquam
+                        facilis accusantium ab voluptatum?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sit error tempore non recusandae
+                        quisquam! Nobis porro voluptas voluptatum voluptate nisi neque ad. Beatae perspiciatis aliquam
+                        facilis accusantium ab voluptatum?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sit error tempore non recusandae
+                        quisquam! Nobis porro voluptas voluptatum voluptate nisi neque ad. Beatae perspiciatis aliquam
+                        facilis accusantium ab voluptatum?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sit error tempore non recusandae
+                        quisquam! Nobis porro voluptas voluptatum voluptate nisi neque ad. Beatae perspiciatis aliquam
+                        facilis accusantium ab voluptatum?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
