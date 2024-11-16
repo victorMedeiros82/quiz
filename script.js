@@ -219,28 +219,5 @@ document.getElementById("help-btn").onclick = () => {
     }
 };
 
-// const circle = document.getElementById('circle');
-// const duration = 60; // Duração em segundos
-// let startTime = Date.now();
-
-// function updateCircle() {
-//     const elapsedTime = (Date.now() - startTime) / 1000;
-//     const percentage = Math.min((elapsedTime / duration) * 360, 360);
-
-//     // Atualiza o preenchimento em sentido horário
-//     circle.style.background = `conic-gradient(
-//     #00ff00 ${percentage}deg,
-//     #ff0000 ${percentage}deg 360deg)`;
-
-//     if (elapsedTime < duration) {
-//         requestAnimationFrame(updateCircle);
-//     }
-// }
-
-// // Inicia a animação
-// updateCircle();
-
-
-
 // Inicializa o jogo
 loadQuestion();
