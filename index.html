@@ -4,33 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show do Milhão</title>
+    <meta name="description"
+        content="Modelo de quiz para um processo seletivo para uma vaga de um mecanico de carros de luxo">
+    <meta name="keywords" content="quiz, processo seletivo, mecanico, carros de luxo">
+    <title>Saber Automotivo</title>
+    <!-- imrpotação do font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container text-center vh-100">
-        <h1 class="">Show do Milhão</h1>
+        <h1 class="d-flex justify-content-center bg-light">SABER AUTOMOTIVO</h1>
         <div id="question-container"
-            class="d-flex flex-column shadow p-4 position-absolute top-50 start-50 translate-middle">
-            <span id="questionNumber" class="text-start">
-                PERGUNTA <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
-            </span>
+            class="d-flex flex-column rounded-4 shadow p-4 position-absolute top-50 start-50 translate-middle p-5">
             <div id="timeAndScore" class="d-flex flex-column align-items-end">
                 <div id="timer" class=""><span><i class="bi bi-clock-history"></i></span> <span id="time">30</span>
                     segundos</div>
                 <div id="score" class="">Pontuação: 0</div>
             </div>
-            <section id="questions" class="shadow p-3">
-                <h2 id="question">Pergunta aqui</h2>
+            <section id="questions" class="d-flex flex-column gap-3 shadow p-5 ">
+                <span id="questionNumber" class="text-start">
+                    PERGUNTA <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+                </span>
+                <h2 id="question" class="text-uppercase">Pergunta aqui</h2>
                 <div id="options" class="mt-4">
                     <!-- Opções serão inseridas dinamicamente -->
                 </div>
             </section>
-            <section id="btns" class="d-flex justify-content-center gap-3 mt-3">
-                <button id="skip-btn" class="btn btn-danger w-100">NÃO SEI</button>
-                <button id="help-btn" class="btn btn-warning w-100">AJUDA</button>
+            <section id="btns" class="d-flex justify-content-between gap-3 mt-3">
+                <button id="skip-btn" class="btn btn-danger w-50">NÃO SEI
+                </button>
+                <button id="help-btn" class="btn btn-warning w-25"><i class="fa-solid fa-handshake-angle"
+                        style="color: #EE9C15;"></i></button>
             </section>
         </div>
     </div>
@@ -82,7 +89,7 @@
                     <h5 class="modal-title">FIM DO JOGO</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-header">
+                <div class="modal-body">
                     <h2 id="header-modal">PREENCHA ATENTAMENTE AS INFORMAÇÕES NECESSÁRIAS</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sit error tempore non recusandae
                         quisquam! Nobis porro voluptas voluptatum voluptate nisi neque ad. Beatae perspiciatis aliquam
